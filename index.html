@@ -1,40 +1,168 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>Página Pessoal</title>
-
-  <script src="https://cdn.tailwindcss.com"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Matheus Rodrigues — Ciência da Computação, UFOP</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F6F9FC;
+    --paper: #FFFFFF;
+    --ink: #0E2A47;
+    --primary: #1B4F8C;
+    --accent: #2FA8D8;
+    --muted: #5B7A99;
+    --line: #D3E1EF;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background-color: var(--bg);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+  }
+  .font-display {
+    font-family: 'Fraunces', serif;
+    font-optical-sizing: auto;
+  }
+  .measure { max-width: 640px; }
+  .hairline { border-color: var(--line); }
+  .fade-in {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeIn 0.7s ease-out forwards;
+  }
+  @keyframes fadeIn {
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .fade-in { animation: none; opacity: 1; transform: none; }
+  }
+  a.link-underline {
+    background-image: linear-gradient(var(--accent), var(--accent));
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 1.5px;
+    transition: background-size 0.25s ease;
+  }
+  a.link-underline:hover {
+    background-size: 100% 1.5px;
+  }
+  .timeline-dot {
+    box-shadow: 0 0 0 4px var(--bg);
+  }
+</style>
 </head>
+<body class="antialiased">
 
-<body class="bg-gray-100 font-sans p-10">
+  <div class="max-w-3xl mx-auto px-6 sm:px-10 py-16 sm:py-24">
 
-  <div class="bg-white p-6 rounded-xl">
+    <!-- Header -->
+    <header class="fade-in flex flex-col sm:flex-row sm:items-start sm:justify-between gap-8 mb-20">
+      <div class="measure">
+        <p class="text-sm tracking-wide" style="color: var(--muted);">Ouro Preto, MG</p>
+        <h1 class="font-display text-4xl sm:text-5xl font-semibold mt-2 leading-tight" style="color: var(--ink);">
+          Matheus Rodrigues
+        </h1>
+        <p class="text-lg mt-3" style="color: var(--primary);">
+          Estudante de Ciência da Computação — UFOP
+        </p>
+        <div class="flex gap-5 mt-6 text-sm font-medium">
+          <a href="https://github.com/rpsmatheus" class="link-underline" style="color: var(--primary);">GitHub</a>
+          <a href="https://linkedin.com/in/matheus-rodrigues-data" class="link-underline" style="color: var(--primary);">LinkedIn</a>
+          <a href="mailto:matheusarp70@gmail.com" class="link-underline" style="color: var(--primary);">E-mail</a>
+        </div>
+      </div>
+      <img src="https://github.com/rpsmatheus.png" alt="Foto de Matheus Rodrigues"
+           class="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl object-cover border-2 flex-shrink-0"
+           style="border-color: var(--primary);">
+    </header>
 
-    <h1 class="text-3xl text-center font-bold text-slate-700">
-      Sobre Mim
-    </h1>
+    <!-- Sobre -->
+    <section class="fade-in mb-20 measure" style="animation-delay: 0.1s;">
+      <h2 class="font-display text-2xl font-medium mb-4" style="color: var(--ink);">Sobre mim</h2>
+      <p class="leading-relaxed" style="color: var(--ink);">
+        Curso Ciência da Computação na Universidade Federal de Ouro Preto (UFOP), com conclusão prevista para dezembro de 2027.
+        Ao longo do curso venho me aproximando da área de dados — primeiro ajudando outros alunos a entenderem algoritmos e
+        estruturas de dados como monitor, e agora investigando, como pesquisa, o que explica o sucesso de bilheteria de um filme.
+      </p>
+    </section>
 
-    <img
-      src="https://github.com/rpsmatheus.png"
-      class="w-48 rounded-full border-4 border-slate-700 p-1 mx-auto"
-    >
+    <!-- Experiência -->
+    <section class="fade-in mb-20" style="animation-delay: 0.2s;">
+      <h2 class="font-display text-2xl font-medium mb-8" style="color: var(--ink);">Experiência acadêmica</h2>
 
-    <p class="text-center font-bold">
-      Meu nome é Matheus Rodrigues
-    </p>
+      <div class="relative pl-8 border-l-2 hairline space-y-10">
 
-    <h2 class="text-2xl font-semibold text-slate-700">
-      Meus Interesses
-    </h2>
+        <div class="relative">
+          <span class="absolute -left-[35px] top-1 w-3 h-3 rounded-full timeline-dot" style="background-color: var(--accent);"></span>
+          <p class="text-sm font-medium" style="color: var(--muted);">nov/2025 — mar/2026</p>
+          <h3 class="font-display text-lg font-medium mt-1" style="color: var(--ink);">Monitor de Estrutura de Dados</h3>
+          <p class="text-sm mt-1" style="color: var(--muted);">UFOP — DECOM</p>
+          <p class="mt-2 leading-relaxed measure" style="color: var(--ink);">
+            Apoio a alunos de graduação na disciplina de Estrutura de Dados, esclarecendo dúvidas sobre implementação
+            de listas, pilhas, filas, árvores e algoritmos de ordenação/busca.
+          </p>
+        </div>
 
-    <ul class="bg-slate-100 p-4 rounded-lg">
-      <li class="hover:text-red-500">Programação</li>
-      <li class="hover:text-red-500">Filmes</li>
-      <li class="hover:text-red-500">Séries</li>
-      <li class="hover:text-red-500">Música</li>
-      <li class="hover:text-red-500">Jogos</li>
-    </ul>
+        <div class="relative">
+          <span class="absolute -left-[35px] top-1 w-3 h-3 rounded-full timeline-dot" style="background-color: var(--accent);"></span>
+          <p class="text-sm font-medium" style="color: var(--muted);">jun/2025 — nov/2025</p>
+          <h3 class="font-display text-lg font-medium mt-1" style="color: var(--ink);">Monitor de Introdução à Programação</h3>
+          <p class="text-sm mt-1" style="color: var(--muted);">UFOP — DECOM</p>
+          <p class="mt-2 leading-relaxed measure" style="color: var(--ink);">
+            Acompanhamento de calouros nos primeiros contatos com lógica de programação, ajudando a destravar os erros
+            mais comuns de quem está escrevendo seus primeiros programas.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Pesquisa -->
+    <section class="fade-in mb-20 measure" style="animation-delay: 0.3s;">
+      <h2 class="font-display text-2xl font-medium mb-4" style="color: var(--ink);">Iniciação científica</h2>
+      <div class="p-6 rounded-2xl" style="background-color: var(--paper); border: 1px solid var(--line);">
+        <h3 class="font-display text-lg font-medium" style="color: var(--ink);">
+          Predição de bilheteria de filmes
+        </h3>
+        <p class="text-sm mt-1" style="color: var(--muted);">
+          Orientação: Prof. Dr. Guilherme Tavares de Assis — DECOM/ICEB, UFOP
+        </p>
+        <p class="mt-3 leading-relaxed" style="color: var(--ink);">
+          Pesquisa voltada a prever a receita de bilheteria de filmes a partir de dados públicos (TMDB, IMDb e
+          Box Office Mojo), usando um pipeline de mineração de dados e modelos como Regressão Ridge, Huber Regressor,
+          Random Forest e KNN.
+        </p>
+      </div>
+    </section>
+
+    <!-- Idiomas -->
+    <section class="fade-in mb-4 measure" style="animation-delay: 0.4s;">
+      <h2 class="font-display text-2xl font-medium mb-4" style="color: var(--ink);">Idiomas</h2>
+      <div class="flex gap-10">
+        <div>
+          <p class="font-medium" style="color: var(--ink);">Português</p>
+          <p class="text-sm" style="color: var(--muted);">Nativo</p>
+        </div>
+        <div>
+          <p class="font-medium" style="color: var(--ink);">Inglês</p>
+          <p class="text-sm" style="color: var(--muted);">Avançado</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="fade-in mt-24 pt-8 border-t hairline flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4" style="animation-delay: 0.5s;">
+      <p class="text-sm" style="color: var(--muted);">© 2026 Matheus Rodrigues</p>
+      <div class="flex gap-5 text-sm font-medium">
+        <a href="https://github.com/rpsmatheus" class="link-underline" style="color: var(--primary);">github.com/rpsmatheus</a>
+        <a href="https://linkedin.com/in/matheus-rodrigues-data" class="link-underline" style="color: var(--primary);">linkedin</a>
+        <a href="mailto:matheusarp70@gmail.com" class="link-underline" style="color: var(--primary);">matheusarp70@gmail.com</a>
+      </div>
+    </footer>
 
   </div>
 
