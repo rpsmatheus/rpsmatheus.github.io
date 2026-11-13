@@ -155,9 +155,18 @@
           Orientação: Prof. Dr. Guilherme Tavares de Assis — DECOM/ICEB, UFOP
         </p>
         <p class="mt-3 leading-relaxed" style="color: var(--ink);">
-          Pesquisa voltada a prever a receita de bilheteria de filmes a partir de dados públicos (TMDB, IMDb e
-          Box Office Mojo), usando um pipeline de mineração de dados e modelos como Regressão Ridge, Huber Regressor,
-          Random Forest e KNN.
+          Classificação do sucesso financeiro de filmes (bilheteria ÷ orçamento, em 5 classes) a partir de uma base
+          de 3.212 filmes que montei com as APIs do TMDB e da OMDb. Comparei 7 modelos de machine learning, de
+          Regressão Logística a XGBoost e CatBoost, e usei importância por permutação para descobrir o que realmente
+          explica o sucesso.
+        </p>
+        <p class="mt-3 leading-relaxed" style="color: var(--ink);">
+          Antes da estreia, orçamento e franquia são os atributos mais importantes nos 7 modelos, enquanto as notas da
+          crítica e do público não acrescentam informação.
+        </p>
+        <div class="flex flex-wrap gap-2 mt-4"><span class="tag">Python</span><span class="tag">pandas</span><span class="tag">scikit-learn</span><span class="tag">XGBoost</span><span class="tag">CatBoost</span></div>
+        <p class="mt-5 text-sm">
+          <a href="https://github.com/rpsmatheus/predicao-bilheteria-filmes" class="link-underline font-medium" style="color: var(--primary);">Ver código e resultados →</a>
         </p>
       </div>
     </section>
@@ -211,7 +220,7 @@
 
         <div class="grid sm:grid-cols-[140px_1fr] gap-2 sm:gap-6 items-start">
           <p class="text-sm font-medium pt-0.5" style="color: var(--muted);">Dados</p>
-          <div class="flex flex-wrap gap-2"><span class="tag">Mineração de dados</span><span class="tag">Regressão</span><span class="tag">Random Forest</span><span class="tag">KNN</span></div>
+          <div class="flex flex-wrap gap-2"><span class="tag">pandas</span><span class="tag">scikit-learn</span><span class="tag">XGBoost</span><span class="tag">CatBoost</span><span class="tag">Mineração de dados</span></div>
         </div>
 
         <div class="grid sm:grid-cols-[140px_1fr] gap-2 sm:gap-6 items-start">
