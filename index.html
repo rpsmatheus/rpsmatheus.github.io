@@ -4,6 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Matheus Rodrigues — Ciência da Computação, UFOP</title>
+<meta name="description" content="Matheus Rodrigues — estudante de Ciência da Computação na UFOP, com foco em dados. Projetos, pesquisa e contato.">
+<meta property="og:title" content="Matheus Rodrigues — Ciência da Computação, UFOP">
+<meta property="og:description" content="Estudante de Ciência da Computação na UFOP, com foco em dados. Buscando estágio.">
+<meta property="og:image" content="https://github.com/rpsmatheus.png">
+<meta property="og:url" content="https://rpsmatheus.github.io/">
+<link rel="icon" href="https://github.com/rpsmatheus.png">
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -50,6 +56,19 @@
   a.link-underline:hover {
     background-size: 100% 1.5px;
   }
+  .card {
+    background-color: var(--paper);
+    border: 1px solid var(--line);
+    transition: border-color 0.2s ease, transform 0.2s ease;
+  }
+  .card:hover { border-color: var(--accent); transform: translateY(-2px); }
+  .tag {
+    font-size: 0.75rem;
+    padding: 0.15rem 0.6rem;
+    border-radius: 999px;
+    background-color: #EAF2FA;
+    color: var(--primary);
+  }
   .timeline-dot {
     box-shadow: 0 0 0 4px var(--bg);
   }
@@ -68,6 +87,10 @@
         </h1>
         <p class="text-lg mt-3" style="color: var(--primary);">
           Estudante de Ciência da Computação — UFOP
+        </p>
+        <p class="inline-flex items-center gap-2 mt-4 text-sm font-medium px-3 py-1 rounded-full" style="background-color: #E3F4FB; color: var(--primary);">
+          <span class="w-2 h-2 rounded-full" style="background-color: var(--accent);"></span>
+          Buscando estágio em dados ou desenvolvimento de software
         </p>
         <div class="flex gap-5 mt-6 text-sm font-medium">
           <a href="https://github.com/rpsmatheus" class="link-underline" style="color: var(--primary);">GitHub</a>
@@ -139,8 +162,67 @@
       </div>
     </section>
 
+    <!-- Projetos -->
+    <section class="fade-in mb-20" style="animation-delay: 0.35s;">
+      <h2 class="font-display text-2xl font-medium mb-8" style="color: var(--ink);">Projetos</h2>
+      <div class="grid sm:grid-cols-2 gap-5">
+        <a href="https://github.com/rpsmatheus/gerencia_caixinha_republica" target="_blank" rel="noopener" class="card block p-6 rounded-2xl">
+          <h3 class="font-display text-lg font-medium" style="color: var(--ink);">Caixinha App</h3>
+          <p class="mt-2 text-sm leading-relaxed" style="color: var(--muted);">Sistema web para gestão financeira de repúblicas estudantis: divide as despesas do mês, controla pagamentos e faz o fechamento da caixinha. Projeto em equipe com autenticação JWT, testes e CI.</p>
+          <div class="flex flex-wrap gap-2 mt-4"><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Node/Express</span><span class="tag">MongoDB</span><span class="tag">Docker</span></div>
+        </a>
+
+        <a href="https://github.com/rpsmatheus/Sistema-de-Gerenciamento-Comercial" target="_blank" rel="noopener" class="card block p-6 rounded-2xl">
+          <h3 class="font-display text-lg font-medium" style="color: var(--ink);">Sistema de Gerenciamento Comercial</h3>
+          <p class="mt-2 text-sm leading-relaxed" style="color: var(--muted);">Sistema web de gestão comercial e produtiva para uma empresa de pães artesanais, com cadastros de clientes, funcionários, fornecedores e produção. Projeto em equipe.</p>
+          <div class="flex flex-wrap gap-2 mt-4"><span class="tag">Python</span><span class="tag">Django</span><span class="tag">PostgreSQL</span><span class="tag">Docker</span></div>
+        </a>
+
+        <a href="https://github.com/rpsmatheus/tp-computacao-grafica-cco" target="_blank" rel="noopener" class="card block p-6 rounded-2xl">
+          <h3 class="font-display text-lg font-medium" style="color: var(--ink);">Visualizador CCO</h3>
+          <p class="mt-2 text-sm leading-relaxed" style="color: var(--muted);">Visualizador WebGL de árvores arteriais em 2D e 3D geradas pelo método CCO, desenvolvido na disciplina de Computação Gráfica.</p>
+          <div class="flex flex-wrap gap-2 mt-4"><span class="tag">JavaScript</span><span class="tag">WebGL</span></div>
+        </a>
+
+        <a href="https://github.com/rpsmatheus/tp2-sistemas-distribuidos" target="_blank" rel="noopener" class="card block p-6 rounded-2xl">
+          <h3 class="font-display text-lg font-medium" style="color: var(--ink);">Cluster Sync</h3>
+          <p class="mt-2 text-sm leading-relaxed" style="color: var(--muted);">Sistema distribuído com sincronização entre nós, executado em containers, com testes de estresse e análise automatizada de logs.</p>
+          <div class="flex flex-wrap gap-2 mt-4"><span class="tag">Python</span><span class="tag">Docker Compose</span></div>
+        </a>
+      </div>
+      <p class="mt-6 text-sm">
+        <a href="https://github.com/rpsmatheus?tab=repositories" class="link-underline font-medium" style="color: var(--primary);">Ver todos os repositórios →</a>
+      </p>
+    </section>
+
+    <!-- Habilidades -->
+    <section class="fade-in mb-20" style="animation-delay: 0.4s;">
+      <h2 class="font-display text-2xl font-medium mb-8" style="color: var(--ink);">Habilidades</h2>
+      <div class="space-y-5">
+        <div class="grid sm:grid-cols-[140px_1fr] gap-2 sm:gap-6 items-start">
+          <p class="text-sm font-medium pt-0.5" style="color: var(--muted);">Linguagens</p>
+          <div class="flex flex-wrap gap-2"><span class="tag">Python</span><span class="tag">TypeScript</span><span class="tag">JavaScript</span><span class="tag">Java</span><span class="tag">Haskell</span></div>
+        </div>
+
+        <div class="grid sm:grid-cols-[140px_1fr] gap-2 sm:gap-6 items-start">
+          <p class="text-sm font-medium pt-0.5" style="color: var(--muted);">Web</p>
+          <div class="flex flex-wrap gap-2"><span class="tag">Django</span><span class="tag">React</span><span class="tag">Node.js / Express</span><span class="tag">HTML e CSS</span><span class="tag">Tailwind CSS</span></div>
+        </div>
+
+        <div class="grid sm:grid-cols-[140px_1fr] gap-2 sm:gap-6 items-start">
+          <p class="text-sm font-medium pt-0.5" style="color: var(--muted);">Dados</p>
+          <div class="flex flex-wrap gap-2"><span class="tag">Mineração de dados</span><span class="tag">Regressão</span><span class="tag">Random Forest</span><span class="tag">KNN</span></div>
+        </div>
+
+        <div class="grid sm:grid-cols-[140px_1fr] gap-2 sm:gap-6 items-start">
+          <p class="text-sm font-medium pt-0.5" style="color: var(--muted);">Ferramentas</p>
+          <div class="flex flex-wrap gap-2"><span class="tag">Git e GitHub</span><span class="tag">Docker</span><span class="tag">PostgreSQL</span><span class="tag">MongoDB</span><span class="tag">GitHub Actions</span></div>
+        </div>
+      </div>
+    </section>
+
     <!-- Idiomas -->
-    <section class="fade-in mb-4 measure" style="animation-delay: 0.4s;">
+    <section class="fade-in mb-4 measure" style="animation-delay: 0.45s;">
       <h2 class="font-display text-2xl font-medium mb-4" style="color: var(--ink);">Idiomas</h2>
       <div class="flex gap-10">
         <div>
